@@ -1,3 +1,5 @@
+export const pool = null;
+
 export async function connectDB() {
   console.log("Database devre dışı. Demo mode aktif.");
   return null;
@@ -16,6 +18,7 @@ export async function queryAll() {
 }
 
 export default {
+  pool,
   connectDB,
   query,
   queryOne,
