@@ -1,23 +1,33 @@
-let ioInstance = null;
+export function setupSocketIO(server) {
+  console.log("Socket.IO demo mode aktif.");
+
+  return {
+    emit: () => {},
+    to: () => ({
+      emit: () => {}
+    }),
+    on: () => {}
+  };
+}
 
 export function initSocket(server) {
-  console.log("Socket sistemi devre dışı (demo mode)");
-  return null;
+  return setupSocketIO(server);
 }
 
 export function getIO() {
-  return ioInstance;
+  return null;
 }
 
 export function emitToCity() {
-  // boş
+  return null;
 }
 
 export function emitToAll() {
-  // boş
+  return null;
 }
 
 export default {
+  setupSocketIO,
   initSocket,
   getIO,
   emitToCity,
